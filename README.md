@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img width="120px" src="Others/EMOjisBOT.png" />
+  <img width="200px" src="Others/EMOjisBOT.png" />
   <h2 align="center">EmojisBot - Transform Emojis into Sentence</h2>
 <!--   <p align="center">📖 Show your latest Medium article on your READMEs!</p> -->
 </p>
