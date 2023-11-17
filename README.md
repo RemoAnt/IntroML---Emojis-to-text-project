@@ -28,7 +28,7 @@ Flow: Emoji->Unicode Representation->Emoji Label (Text)->Language Transformer->S
 ## Participants
 
 - **Kenneth Edgar**
-- **Vincent**
+- **Vincent Leon**
 - **Dominick Matthew Singgih 施平治**
 - **Jansen Reynaldi Gautama 劉其生**
 - **Edbert Fuji Wijaya**
