@@ -14,6 +14,11 @@ This project focuses on making it easier to understand and express emotions usin
 ## Project Overview
 
 We aim to design a Discord bot that can analyze and interpret Combination of emojis and respond with well-constructed sentences that convey the intended meaning behind the emojis. 
+<p align="center">
+  <img width="260px" src="Others/Discordbot.jpg" />
+  <img width="500px" src="Others/Discordbot1.png" />
+<!--   <p align="center">📖 Show your latest Medium article on your READMEs!</p> -->
+</p>
 
 ## Methodology 1
 
