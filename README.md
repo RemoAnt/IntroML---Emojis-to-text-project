@@ -37,7 +37,7 @@ Flow: Emoji->Unicode Representation->Emoji Label (Text)->Language Transformer->S
 - **Dominick Matthew Singgih 施平治 109006210 - Visualizing Data, Datasets, and Research **
 - **Jansen Reynaldi Gautama 劉其生 109006240 - Model to Discord integration, Dataset and Research **
 - **Edbert Fuji Wijaya 110006164 - Dataset and Research **
-- **Rémi Antonucci - Visualizing Data, Dataset, Research, and GitHub Management**
+- **Rémi Antonucci X1120012 - Visualizing Data, Dataset, Research, and GitHub Management**
 
   ## Getting Started
 
