@@ -32,12 +32,12 @@ Flow: Emoji->Unicode Representation->Emoji Label (Text)->Language Transformer->S
 
 ## Participants
 
-- **Kenneth Edgar**
-- **Vincent Leon**
-- **Dominick Matthew Singgih 施平治**
-- **Jansen Reynaldi Gautama 劉其生**
-- **Edbert Fuji Wijaya**
-- **Rémi Antonucci**
+- **Kenneth Edgar 109006211 - Model Design, Datasets and Research**
+- **Vincent Leon 109006230 - Datasets, Research and GitHub Management**
+- **Dominick Matthew Singgih 施平治 109006210 - Visualizing Data, Datasets, and Research**
+- **Jansen Reynaldi Gautama 劉其生 109006240 - Model to Discord integration, Dataset and Research**
+- **Edbert Fuji Wijaya 110006164 - Dataset and Research**
+- **Rémi Antonucci X1120012 - Visualizing Data, Dataset, Research, and GitHub Management**
 
   ## Getting Started
 
