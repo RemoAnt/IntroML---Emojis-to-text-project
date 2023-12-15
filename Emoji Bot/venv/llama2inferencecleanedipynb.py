@@ -30,9 +30,6 @@ import transformers
 from torch import cuda
 
 
-
-
-
 def Get_ModelTokenizer():
     # model_name = "NousResearch/Llama-2-7b-chat-hf"
     model_name = "Domwerr/llama2-7b-Emoji-epoch4-2e-4"

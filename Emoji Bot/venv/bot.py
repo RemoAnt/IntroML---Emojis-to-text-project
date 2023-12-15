@@ -1,6 +1,7 @@
 import discord
 import responses
-
+from urllib import request
+from colorama import Fore, Back, Style
 
 async def send_message(message, user_message, is_private):
     try :
@@ -19,6 +20,8 @@ def run_discord_bot():
     async def on_ready():
         print(f'{client.user} is now running!')
 
+    image_types = ["png", "jpeg", "gif", "jpg", "mp4", "mov"]
+
     @client.event
     async def on_message(message):
         if message.author == client.user:
@@ -29,14 +32,26 @@ def run_discord_bot():
 
         print(username, " write " ,user_message, " in " ,channel)
         print(message)
-    
-        if user_message[0] == '?':
-            user_message = user_message[1:]
-            await send_message(message, user_message, is_private=True)
-        else :
-            if user_message[0] == '!' :
+        if len(user_message) != 0:
+            if user_message[0] == '?':
                 user_message = user_message[1:]
-                await send_message(message, user_message, is_private=False)
+                await send_message(message, user_message, is_private=True)
+            else :
+                if user_message[0] == '!' :
+                    user_message = user_message[1:]
+                    await send_message(message, user_message, is_private=False)
+        else :
+            #EXPERIMENTAL USED FOR IMAGE CLASSIFIER
+            counter = 0
+            for attachment in message.attachments:
+                    if any(attachment.filename.lower().endswith(image) for image in image_types):
+                        counter += 1
+                        name = str(counter) + attachment.filename
+                        await attachment.save(f'C:/Users/Jansen/Desktop/CODING/phyton/ML/Final Project/Emoji Bot/attachments/{name}') # 'attachments/{{attachment.filename}' is the PATH to where the attachmets/images will be saved. Example: home/you/Desktop/attachments/{{attachment.filename}
+                        print(f'Attachment {attachment.filename} has been saved to directory/folder > attachments.')
+
+            print("picture")
+
 
 
     client.run(TOKEN)

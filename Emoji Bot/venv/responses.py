@@ -10,10 +10,7 @@ def handle_response(msgin) -> str:
     print(msg)
     if msg == 'hello' :
         return 'hi'
-    
-    if msg == 'help' :
-        return 'I Have Nothing To Help This is A Test Bot Dumb Ass'
-    
+
     if msg[0:8] == "analyze ":
         msgs = msg.split("analyze ")[1]
         print(msgs)
@@ -25,15 +22,10 @@ def handle_response(msgin) -> str:
         return ("demojize_text :", demojize_text, "\n emojize_text :", emojize_text, "\nanalyzed_text :", analyzed_text, "\nunicode_text :", unicode_text)
 
 
-
-
-
-
     if msg[0:9] == 'generate ' :
         msgs = msg.split("generate ")[1]
         demojize_text = emoji.demojize(msgs)
-
-        #Start by Dom
+        
         PreprocessZero = demojize_text.replace(" ", "")
         PreprocessOne = PreprocessZero.replace("::", ", ")
         PreprocessTwo = PreprocessOne.replace(":", "")
@@ -57,18 +49,6 @@ def handle_response(msgin) -> str:
         # print(msgs)
         # return(demojize_text)
 
-
-
-
-
-
-
-
-    if msg[0:2] == "tt":
-        # msgs = msg.split("tt ")[1]
-        # print(msgs)
-
-        return("Not Defined Yet")
     # demojize_text = emoji.demojize(msg)
     # emojize_text = emoji.emojize(msg)
     # analyzed_text = list(emoji.analyze(msg, join_emoji=False))
