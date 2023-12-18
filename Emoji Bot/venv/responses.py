@@ -48,6 +48,34 @@ def handle_response(msgin) -> str:
 
         # print(msgs)
         # return(demojize_text)
+    
+    if msg[0:6] == 'reply ' :
+        msgs = msg.split("reply ")[1]
+        demojize_text = emoji.demojize(msgs)
+        
+        PreprocessZero = demojize_text.replace(" ", "")
+        PreprocessOne = PreprocessZero.replace("::", ", ")
+        PreprocessTwo = PreprocessOne.replace(":", "")
+        PromptResult = "Please respond the following text as if in a chat using only one sentence: " + PreprocessTwo +"."
+        
+        SCurModel, SCurTokenizer = llama2inferencecleanedipynb.Get_ModelTokenizer_ETR()
+        SCurDevice = llama2inferencecleanedipynb.Get_Current_Device_ETR()    
+        
+        SResult = llama2inferencecleanedipynb.GetInference_ETR(PromptResult, SCurModel, SCurTokenizer, SCurDevice)
+        print("Prompt0: " + PreprocessOne)
+        print("Prompt0: " + PreprocessTwo)
+        print("Prompt0: " + PromptResult)
+        print("Result: " + SResult)
+        del SCurModel
+        del SCurTokenizer
+        del SCurDevice
+        gc.collect()
+        torch.cuda.empty_cache()
+        return(SResult)
+
+        # print(msgs)
+        # return(demojize_text)
+    
 
     # demojize_text = emoji.demojize(msg)
     # emojize_text = emoji.emojize(msg)
@@ -57,3 +85,5 @@ def handle_response(msgin) -> str:
     # print("demojize_text :", demojize_text, "\n emojize_text :", emojize_text, "\nanalyzed_text :", analyzed_text, "\nunicode_text :", unicode_text)
     print(msg)
     return("Unknown Command")
+
+
